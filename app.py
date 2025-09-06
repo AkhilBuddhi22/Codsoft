@@ -1,13 +1,8 @@
-# To-Do List Application
 Todolist=[]
-
-#add a task
 def addtask():
     task=input("Enter the task:")
     Todolist.append({'Task': task, 'Status': "Pending"})
     print("New task added successfully\n")
-
-#view all tasks
 def viewtask():
     print("your to-do list:\n")
     if len(Todolist)==0:
@@ -15,8 +10,6 @@ def viewtask():
     else:
         for i,task in enumerate(Todolist, 1):
             print(f"{i}:{task['Task']} - {task['Status']}")
-
-#remove a task
 def removetask():
     if len(Todolist)==0:
         print("List is Empty!")
@@ -30,9 +23,6 @@ def removetask():
                 print("Invalid task number. Please try again.")
         except ValueError:
             print("Invalid input. Please enter a valid task number.")
-
-
-#mark a task as done
 def markdone():
     if len(Todolist)==0:
         print("List is Empty!")
@@ -46,9 +36,6 @@ def markdone():
                 print("Invalid task number. Please try again.")
         except ValueError:
             print("Invalid input. Please enter a valid task number.")
-
-
-#main menu
 def menu():
     while (True):
         print("Welcome to the To-Do List Application!")
@@ -71,6 +58,5 @@ def menu():
             print("Thank you for using the To-Do List App!")
             break
         else:
-            print("Invalid choice, please try again.")
-          
+            print("Invalid choice, please try again.")    
 menu()    
